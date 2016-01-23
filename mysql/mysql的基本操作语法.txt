@@ -1,0 +1,14 @@
+欢迎来到mysql的世界
+
+首先进入mysql
+
+mysql -u root -p password
+
+
+
+
+
+修改mysql中用户的密码
+
+set password for root@localhost = password('新的密码'); 
+
