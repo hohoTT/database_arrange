@@ -1,0 +1,36 @@
+1.MySql的ERROR 1366 (HY000): Incorrect string value:问题如何解决？
+
+需要把表的字符集也改下，
+alter table tbname convert to charset gbk;
+
+
+
+2..mysql设置编码命令:
+
+SET character_set_client = utf8;
+
+SET character_set_connection = utf8;
+
+SET character_set_database = utf8;
+
+SET character_set_results = utf8;
+
+SET character_set_server = utf8;
+
+
+注意：此种方式只在当前状态下有效，当重启数据库服务后失效。
+
+所以如果想要不出现乱码只有修改my.ini文件，
+从my.ini下手(标签下没有的添加，有的修改)
+
+[client]
+
+default-character-set=utf8
+
+[mysql]
+
+default-character-set=utf8
+
+[mysqld]
+
+default-character-set=utf8

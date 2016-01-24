@@ -123,6 +123,9 @@
 
 -- = ANY 或 = SOME 等价于 IN
 
+
+-- 这里需要注意的是
+
    SELECT goods_id,goods_name,goods_price FROM tdb_goods 
 
    WHERE goods_price IN (SELECT goods_price FROM tdb_goods WHERE goods_cate = '超级本')
